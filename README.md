@@ -7,6 +7,7 @@ http_archive(
     name = "bazel_pkg_config",
     strip_prefix = "bazel_pkg_config-main",
     urls = ["https://github.com/yangxin0/bazel_pkg_config/archive/refs/heads/main.zip"],
+    # update to main.zip sha256
     sha256 = "6f1041545e29f5c2419fd1655f928c34f99f248e7a4e886d1c7044f67d6c7940"
 )
 
