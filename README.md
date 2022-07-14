@@ -5,9 +5,9 @@ Add pkg-config repository in WORKSPACE
 ```
 http_archive(
     name = "bazel_pkg_config",
-    strip_prefix = "bazel_pkg_config-macos",
-    urls = ["https://github.com/yangxin0/bazel_pkg_config/archive/refs/tags/macos.zip"],
-    sha256 = "2a5c95af3486aae32861abc0b642c766f171216e23b8ee297dbf8432c0832f7e"
+    strip_prefix = "bazel_pkg_config-macos2",
+    urls = ["https://github.com/yangxin0/bazel_pkg_config/archive/refs/tags/macos2.zip"],
+    sha256 = "6e4bff63a5cadd6fc790cf4c3c93b9b4418fcb7c023c98caf610ba141774b94d
 )
 
 load("@bazel_pkg_config//:pkg_config.bzl", "pkg_config_shared")
