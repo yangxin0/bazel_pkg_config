@@ -1,14 +1,13 @@
 package(default_visibility = ["//visibility:private"])
 
-cc_import(
-    name = "%{external_pkg_name}",
-    shared_library = "%{external_lib}"
-)
+libs = "%{pkg_libs}".split(",")
+deps = [lib.replace("/", "_") for lib in libs]
+[cc_import(name = lib.replace("/", "_"), shared_library = lib) for lib in libs]
 
 cc_library(
     name = "shared_lib",
-    hdrs = glob(["%{external_header_dir}/**/*.h"]),
-    deps = ["%{external_pkg_name}"],
-    strip_include_prefix = "%{external_header_dir}",
+    hdrs = glob(["%{pkg_include}/**/*.h"]),
+    deps = deps,
+    strip_include_prefix = "%{pkg_include}",
     visibility = ["//visibility:public"],
 )
